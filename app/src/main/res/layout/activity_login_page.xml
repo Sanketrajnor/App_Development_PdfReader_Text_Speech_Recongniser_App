@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/gradient"
+    tools:context=".LoginPage">
+
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="308dp"
+        android:layout_height="59dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:hint="User Name"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="59dp"
+        android:src="@drawable/baseline_person_24" />
+
+    <ImageView
+        android:layout_width="37dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="170dp"
+        android:src="@drawable/baseline_key_24" />
+
+    <ImageView
+        android:layout_width="42dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="277dp"
+        android:src="@drawable/baseline_key_24" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="299dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/user_name"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="48dp"
+        android:hint="Password"
+        android:textColor="@color/white"
+        android:inputType="textPassword" />
+
+    <ImageView
+        android:id="@+id/show_view_pass"
+        android:layout_width="43dp"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="157dp"
+        android:layout_marginEnd="36dp" />
+
+    <EditText
+        android:id="@+id/repassword"
+        android:layout_width="291dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:hint="Retype Password"
+        android:inputType="textPassword"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnsignup"
+        android:layout_width="140dp"
+        android:layout_height="69dp"
+        android:layout_above="@+id/indicator"
+        android:layout_below="@+id/repassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/round_button"
+        android:selectAllOnFocus="false"
+        android:text="SignUp" />
+
+    <TextView
+        android:id="@+id/indicator"
+        android:layout_width="221dp"
+        android:layout_height="46dp"
+        android:layout_above="@+id/btnsignin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        android:text="If,you have already an account then go to sign in"
+        android:textAlignment="center"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/btnsignin"
+        android:layout_width="143dp"
+        android:layout_height="66dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="61dp"
+        android:background="@drawable/round_button"
+        android:text="Sign In" />
+
+
+</RelativeLayout>

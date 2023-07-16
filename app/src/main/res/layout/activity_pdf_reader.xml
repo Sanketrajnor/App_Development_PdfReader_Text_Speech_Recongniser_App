@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/brown_gradient"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="412dp"
+        android:layout_height="741dp"
+        android:layout_marginTop="16dp"
+        android:text="PDF Reader"
+        android:textAlignment="center"
+        android:textColor="#7700FF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="349dp"
+        android:layout_height="490dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_headTop">
+
+        <TextView
+            android:id="@+id/tv_pageContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_PreviousPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:contentDescription="Goto Previous Page"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_circle_left_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_nextPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:contentDescription="Goto Next Page"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintStart_toEndOf="@+id/fab_PreviousPage"
+        app:layout_constraintTop_toTopOf="@+id/fab_PreviousPage"
+        app:srcCompat="@drawable/baseline_arrow_circle_right_24" />
+
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/save_pdf"-->
+    <!--        android:layout_width="52dp"-->
+    <!--        android:layout_height="54dp"-->
+    <!--        android:background="@drawable/save_audio"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.423"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/fab_selectFile"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/fab_nextPage"-->
+    <!--        app:layout_constraintVertical_bias="0.292" />-->
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/save_files"-->
+    <!--        android:layout_width="117dp"-->
+    <!--        android:layout_height="36dp"-->
+    <!--        android:layout_marginEnd="56dp"-->
+    <!--        android:layout_marginBottom="12dp"-->
+    <!--        android:text="Save PDF File"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:textSize="18dp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/add_file"-->
+    <!--        android:layout_width="115dp"-->
+    <!--        android:layout_height="38dp"-->
+    <!--        android:layout_marginStart="68dp"-->
+    <!--        android:layout_marginBottom="12dp"-->
+    <!--        android:text="Add PDF File"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:textSize="18dp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/save_files"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_selectFile"
+        android:layout_width="66dp"
+        android:layout_height="71dp"
+        android:layout_marginEnd="312dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:contentDescription="Select Pdf Icon"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/baseline_add_24" />
+
+    <TextView
+        android:id="@+id/tv_currentPgNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_pgNoSeperator"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_pgNoSeperator" />
+
+    <TextView
+        android:id="@+id/tv_pgNoSeperator"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginBottom="108dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_totalPages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="112dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_pgNoSeperator" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_playTts"
+        android:layout_width="68dp"
+        android:layout_height="59dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:contentDescription="Play Stop Text Icon"
+        android:focusable="true"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.585"
+        app:srcCompat="@drawable/baseline_play_arrow_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_addBig"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:clickable="true"
+        android:backgroundTint="#754333"
+        android:contentDescription="Select Pdf Icon"
+        android:focusable="true"
+        app:fabCustomSize="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="120dp"
+        app:srcCompat="@drawable/add_icon"
+        app:tint="@null" />
+    <TextView
+        android:id="@+id/tv_head2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/scrollView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/scrollView2"
+        app:layout_constraintTop_toBottomOf="@+id/fab_addBig" />
+
+    <TextView
+        android:id="@+id/tv_head1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/fab_addBig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_headTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_headTop"
+        app:layout_constraintTop_toTopOf="@+id/iv_headTop" />
+
+    <ImageView
+        android:id="@+id/iv_headTop"
+        android:layout_width="88dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/iconmyapp" />
+
+    <View
+        android:id="@+id/line_headTop"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="#001AFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_headTop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

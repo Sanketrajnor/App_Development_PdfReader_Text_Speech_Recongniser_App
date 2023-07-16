@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/signin"
+    tools:context=".SignIn">
+
+    <EditText
+        android:id="@+id/username1"
+        android:layout_width="270dp"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="188dp"
+        android:hint="User Name"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:layout_width="39dp"
+        android:layout_height="54dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="210dp"
+        android:src="@drawable/baseline_person_24" />
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="319dp"
+        android:src="@drawable/baseline_key_24" />
+
+    <EditText
+        android:id="@+id/password1"
+        android:layout_width="275dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="334dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/show_pass_signin"
+        android:layout_width="45dp"
+        android:layout_height="54dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="342dp"
+        android:layout_marginEnd="49dp" />
+
+    <Button
+        android:id="@+id/btnsignin1"
+        android:layout_width="194dp"
+        android:layout_height="76dp"
+        android:background="@drawable/round_button"
+        android:layout_below="@+id/password1"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="101dp"
+        android:text="Sign in" />
+</RelativeLayout>
